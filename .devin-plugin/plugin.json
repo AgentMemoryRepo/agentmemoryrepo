@@ -1,0 +1,6 @@
+{
+  "name": "agent-memory-repo",
+  "description": "Keep agent memory in a git repo, following the Agent Memory Repo spec.",
+  "repository": "https://github.com/AgentMemoryRepo/agentmemoryrepo",
+  "license": "MIT"
+}

@@ -148,6 +148,36 @@ An entry in `MEMORY.md` says what the query does and links to it:
 
 A later session follows the link and runs the saved SQL for the current count, without rediscovering the joins and filters.
 
+## Try with your agent
+
+Install the `agent-memory-repo` skill. It teaches an agent to keep memory in a separate local git repo that follows this spec.
+
+```sh
+npx skills add AgentMemoryRepo/agentmemoryrepo --skill agent-memory-repo
+```
+
+The installer asks which agents to install it for. In Devin, install it as a plugin:
+
+```sh
+devin plugins install AgentMemoryRepo/agentmemoryrepo
+```
+
+Then try it in two sessions on the same machine. Pick any harmless preference, like how you want summaries formatted.
+
+Session 1:
+
+```text
+Use the agent-memory-repo skill. Set up my memory repo at ~/agent-memory, or reuse it if it already exists. Remember that I prefer <your preference>. Commit it and tell me where it's saved.
+```
+
+Session 2, in a new session:
+
+```text
+Use the agent-memory-repo skill with my memory repo at ~/agent-memory. What do you remember about my preferences?
+```
+
+Memory stays local in `~/agent-memory` unless you connect a private repo you own. Session 2 finds it only if it runs on the same filesystem. On a new cloud machine or another computer, ask the agent to clone your private memory repo first.
+
 ## Open development
 
 Agent Memory Repo was originally developed by Cognition and released as an open standard. It is open to contributions from the broader ecosystem.
