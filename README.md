@@ -162,21 +162,21 @@ The installer asks which agents to install it for. In Devin, install it as a plu
 devin plugins install AgentMemoryRepo/agentmemoryrepo
 ```
 
-Then try it in two sessions on the same machine. Pick any harmless preference, like how you want summaries formatted.
+Then try it in two sessions. The trial is local, so run both sessions on the same machine and storage, in the same project.
 
 Session 1:
 
 ```text
-Use the agent-memory-repo skill. Set up my memory repo at ~/agent-memory, or reuse it if it already exists. Remember that I prefer <your preference>. Commit it and tell me where it's saved.
+Use the agent-memory-repo skill to set up a separate local memory repo for this trial. Save this trial preference: I prefer concise bullet-point summaries. Do not configure a remote. Tell me the full path to the memory repo so I can reuse it next session.
 ```
 
 Session 2, in a new session:
 
 ```text
-Use the agent-memory-repo skill with my memory repo at ~/agent-memory. What do you remember about my preferences?
+Use the agent-memory-repo skill with the memory repo at <paste the full path from the previous session>. What trial preference did I save?
 ```
 
-Memory stays local in `~/agent-memory` unless you connect a private repo you own. Session 2 finds it only if it runs on the same filesystem. On a new cloud machine or another computer, ask the agent to clone your private memory repo first.
+Memory stays local unless you connect a private repo you own. On a new cloud machine or another computer, the local memory repo isn't there. Ask the agent to clone your private memory repo first.
 
 ## Open development
 
