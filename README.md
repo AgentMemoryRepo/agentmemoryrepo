@@ -4,6 +4,8 @@ Agents need memory that lasts across sessions, and a single `MEMORY.md` file isn
 
 Git gives memory a history, a way to merge, and permissions. Agents already know how to use it.
 
+The spec is also published at [cognition.ai/agent-memory-repo](https://cognition.ai/agent-memory-repo).
+
 ## The memory loop
 
 Every session follows the same steps.
