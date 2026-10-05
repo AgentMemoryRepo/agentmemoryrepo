@@ -33,6 +33,8 @@ Dreaming is a dedicated agent that runs periodically. It has two jobs.
 <details>
 <summary><strong>Format</strong>: repository layout, entries, metadata, and cross-links</summary>
 
+The full file structure spec is in [SPEC.md](SPEC.md).
+
 ### Repository layout
 
 Organize files and folders however you want. The repo can contain Markdown notes, SQL queries, scripts, and other files.
