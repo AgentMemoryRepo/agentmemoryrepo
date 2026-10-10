@@ -52,6 +52,7 @@ Follow the spec's format:
 
 - Each entry is one bullet on one line, with optional metadata at the end: `[key: value; key: value]`.
 - Recommended keys are `source` (a link to the session where you learned it, if you have one) and `added` (`YYYY-MM-DD`).
+- A value can't contain `;`, `[`, or `]`. In a URL, write them as `%3B`, `%5B`, and `%5D`.
 - Put an entry in `MEMORY.md`, above `## Index`, only if every session needs it. Put everything else in a topic file and link it from the `## Index` in `MEMORY.md` with `[[path]]`. Omit `.md` for Markdown files.
 - Edit files in place. Update or remove entries that are out of date instead of adding a contradicting entry.
 
