@@ -125,6 +125,8 @@ Metadata uses `[key: value; key: value]`. Keys are open. Recommended keys:
 - `source`: a link to the agent session where the information was learned.
 - `added`: when it was saved, as `YYYY-MM-DD`.
 
+A key ends at the first `:`, so a value can contain colons, as URLs do. A value cannot contain `;`, `[`, or `]`, which delimit the metadata. In a URL, write them as `%3B`, `%5B`, and `%5D`.
+
 ### Cross-links
 
 Use `[[path]]` to link between files. Paths start at the memory root. Omit `.md` for Markdown files; keep other extensions, as in `[[metrics/autocomplete_keep_rate.sql]]`. Keep information in one place and link to it elsewhere. Update links when moving or renaming files.
